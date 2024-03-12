@@ -1,0 +1,378 @@
+# Rust
+## Research
+- **Scope**:
+	- [ ] Book coverage of the language
+		- [ ] Basics
+			- [ ] Installing
+			- [ ] Compiling and running
+			- [ ] Cargo
+		- [ ] Variables
+		- [ ] Mutability
+		- [ ] Constants
+		- [ ] Shadowing
+		- [ ] Data types
+			- [ ] Scalar
+				- [ ] Integer
+				- [ ] Floating-point
+				- [ ] Boolean
+			- [ ] Compound
+				- [ ] Tuple
+				- [ ] Array
+		- [ ] Comments
+		- [ ] Functions
+			- [ ] Statements and expressions
+			- [ ] Return
+		- [ ] Control flow
+			- [ ] `if`
+			- [ ] `else if`
+			- [ ] `let if`
+		- [ ] Loops
+			- [ ] `loop`
+			- [ ] `while`
+			- [ ] `for`
+		- [ ] Ownership
+			- [ ] Variable scope
+			- [ ] Memory and allocation
+			- [ ] Variables and data interacting
+				- [ ] Move
+				- [ ] Clone
+				- [ ] Copy
+			- [ ]  References and borrowing
+			- [ ] Mutable references
+			- [ ] Danglin references
+			- [ ] Slice type
+				- [ ] String slice
+				- [ ] Array slice
+		- [ ] Struct
+			- [ ] Define
+			- [ ] Field init
+			- [ ] Update syntax
+			- [ ] Tuple structs
+			- [ ] Unit-Like
+			- [ ] Derived traits
+			- [ ] Method syntax
+				- [ ] Define
+				- [ ] More parameters
+				- [ ] Mutiple `impl`
+		- [ ] Enums
+			- [ ] Define
+			- [ ] Option
+			- [ ] Match patterns
+				- [ ] Define
+				- [ ] Bind to values
+				- [ ] Option
+				- [ ] Exhaustive
+				- [ ] Catch-all and `_`
+			- [ ] Concise control with if let
+		- [ ] Managing growing projects
+			- [ ] Packages and crates
+			- [ ] Modules
+				- [ ] Declare
+				- [ ] Grouping related code
+				- [ ] Paths
+					- [ ] pub
+					- [ ] super
+					- [ ] structs and enums public
+				- [ ] use keyword
+					- [ ] Use
+					- [ ] Idiomatic
+					- [ ] as keyword
+					- [ ] pub use
+					- [ ] External packages
+					- [ ] Nested paths
+					- [ ] Glob
+				- [ ] Modules in different files
+		- [ ] Collections
+			- [ ] Vectors
+				- [ ] Create
+				- [ ] Update
+				- [ ] Read
+				- [ ] Iterate
+				- [ ] Drop
+			- [ ] Strings
+				- [ ] Create
+				- [ ] Update
+					- [ ] Append
+					- [ ] Concatenate
+				- [ ] Index
+				- [ ] Slice
+			- [ ] Hash maps
+				- [ ] Create
+				- [ ] Access
+				- [ ] Ownership
+				- [ ] Update
+					- [ ] Overwrite
+					- [ ] Add key if not in hash
+					- [ ] Add based on old value
+				- [ ] Functions
+		- [ ] Error handling
+			- [ ] Unrecoverable errors
+			- [ ] Recoverable errors
+				- [ ] Matching
+				- [ ] `unwrap` and `expect`
+				- [ ] Propagating errors
+			- [ ] Cases
+			- [ ] Guidelines
+			- [ ] Custom types
+		- [ ] Generic types
+			- [ ] Functions
+			- [ ] Structs
+			- [ ] Enums
+			- [ ] Methods
+		- [ ] Traits Bounds
+			- [ ] Define
+			- [ ] Implement in types
+			- [ ] As parameters
+			- [ ] Returning types
+			- [ ] Trait bounds to implement methods
+		- [ ] Lifetimes
+			- [ ] Preventing dangling references
+			- [ ] Borrow checker
+			- [ ] Generic lifetimes in functions
+			- [ ] Annotation
+				- [ ] Syntax
+				- [ ] Function
+				- [ ] Method
+				- [ ] Struct
+			- [ ] Thinking in terms of lifetimes
+			- [ ] Elision rules
+			- [ ] Static lifetime
+		- [ ] Automated tests
+			- [ ] Write
+				- [ ] Anatomy
+				- [ ] `assert!`
+				- [ ] `assert_eq! and assert_ne!`
+				- [ ] Custom failure messages
+				- [ ] `should_panic`
+				- [ ] `Result <T, E>
+			- [ ] Run
+				- [ ] Parallel or consecutively
+				- [ ] Output
+				- [ ] Subset of tests
+				- [ ] Ignore tests
+			- [ ] Organization
+				- [ ] Unit
+					- [ ] Tests module and `#[cfg(test)]`
+					- [ ] Private functions
+				- [ ] Integration
+					- [ ] *tests* directory
+					- [ ] Submodules
+					- [ ] Crates
+		- [ ] Functional language features
+			- [ ] Closures
+				- [ ] Capturing enviroment
+				- [ ] Inference and annotation
+				- [ ] Capturing references or moving ownership
+				- [ ] Moving captured out of closures and `fn` traits
+			- [ ] Iterators
+				- [ ] `Iterator` trait and `next` method
+				- [ ] Methods that consume
+				- [ ] Methods that produce
+				- [ ] Closures that capture their enviroment
+			- [ ] 
+		- [ ] Advanced Cargo
+			- [ ] Customizing builds with release profiles
+			- [ ] Cargo Workspaces
+				- [ ] Create
+				- [ ] Second package
+				- [ ] External packages
+			- [ ] Installing Binaries
+			- [ ] Extending Cargo
+		- [ ] Crates.io
+			- [ ] Documentation comments
+				- [ ] Common places
+				- [ ] Tests
+			- [ ] Contained Items
+			- [ ] Public API with `pub` use
+			- [ ] Setup Crates.io account
+			- [ ] Metadata to a New Crate
+			- [ ] Publishing to Crates.io
+			- [ ] Publishing new version
+			- [ ] Deprecating version with `cargo yank`
+		- [ ] Smart Pointers
+			- [ ] `Box<T>` on heap
+				- [ ] Store
+				- [ ] Recursive Types
+			- [ ] Smart pointers like regular references with the `Deref` trait
+				- [ ] Following the pointer to the value
+				- [ ] Using `Box<T>`like a reference
+				- [ ] Defining our own smart pointer
+				- [ ] Type like a reference with `Deref` trait
+				- [ ] With functions and methods
+				- [ ] Interaction with mutability
+			- [ ] Running code on cleanup with `Drop` trait
+				- [ ] Dropping a value early with std::mem::drop
+			- [ ] `Rc<T>`, the reference counted smart pointer
+				- [ ] Share data
+				- [ ] Clone and increase reference count
+			- [ ] `RefCell<T>` and the interior mutability pattern
+				- [ ] Enforcing borrowing at runtime
+				- [ ] Interior mutability
+					- [ ] Mock objects
+					- [ ] Keeping track of borrows ar runtime with `RefCell<T>`
+				- [ ] Multiple owners of mutable data by combining `Rc<T>` and `RefCell<T>`
+			- [ ] Reference cycles
+				- [ ] Create
+				- [ ] Preventing reference cycles
+					- [ ] Create tree data structure
+					- [ ] Add reference from a child to parent
+					- [ ] Visualizing changes to `strong_count` and `weak_count`
+		- [ ] Fearless concurrency
+			- [ ] Using threads
+				- [ ] Create with `spawn`
+				- [ ] Waiting for all threads to finish using `join` handles
+				- [ ] Using `move` closures
+				- [ ] 
+			- [ ] Message passing
+				- [ ] Channels and ownership transference
+				- [ ] Sending multiple values and seeing the receiver waiting
+				- [ ] Creating multiple procedures by cloning transmitter
+			- [ ] Shared-state conurrency
+				- [ ] Using mutexes
+				- [ ] API of `Mutex<T>`
+				- [ ] Sharing a `Mutex<T>` between multiple threads
+				- [ ] Multiple ownership with multiple threads
+				- [ ] Atomic reference counting with `Arc<T>`
+				- [ ] Similarities between `RefCell<T>/Rc<T>` and `Mutex<T>/Arc<T>` 
+			- [ ] Extensible concurrency with the `Sync` and `Send` traits
+				- [ ] Allowing transference of ownership betweein threads with  `Send`
+				- [ ] Allowing access from multiple threads with `Sync`
+				- [ ] Implementing `Send` and `Sync` manually is unsafe
+		- [ ] OOP features on Rust
+			- [ ] Characteristics of OOP
+				- [ ]  Objects contain data and behavior
+				- [ ] Encapsulation hides implementation details
+				- [ ] Inheritance as a type system and as code sharing
+			- [ ] Using Trait objects that allow for values of different types
+				- [ ] Define for common behavior
+				- [ ] Implement
+				- [ ] Dynamic dispatch
+			- [ ] Implementing OOP design pattern
+				- [ ] Storing text of post content
+				- [ ] Ensuring the content of a draft post is empty
+				- [ ] Requesting a review of the post changes its state
+				- [ ] Adding `approve` to change the behavior of content
+				- [ ] Trade-off of the state pattern
+					- [ ] Encoding state and behavior as types
+					- [ ] Implementing transitions as transformations into different types
+		- [ ] Patterns and matching
+			- [ ] Pattern use
+				- [ ] `match` arms
+				- [ ] `if let`
+				- [ ] `while let`
+				- [ ] `for`
+				- [ ] `let`
+				- [ ] Function parameters
+			- [ ] Refutability
+			- [ ] Pattern syntax
+				- [ ] Literals
+				- [ ] Named variables
+				- [ ] Multiple patterns
+				- [ ] Ranges of values
+				- [ ] Destructuring
+					- [ ] Structs
+					- [ ] Enums
+					- [ ] Nested structs and enums
+					- [ ] Structs and tuples
+				- [ ] Ignoring values
+					- [ ] Entire value
+					- [ ] Parts of a value
+					- [ ] Unused variable
+					- [ ] Remaining parts
+				- [ ] Extra conditionals with match guards
+				- [ ] @ bindings
+		- [ ] Advanced features
+			- [ ] Unsafe Rust
+				- [ ] Superpowers
+				- [ ] Dereferencing a raw pointer
+				- [ ] Calling unsafe function or method
+				- [ ] Creating a safe abstraction over unsafe code
+				- [ ] Using `extern` functions to call external code
+				- [ ] Accessing or modifying a mutable static variable
+				- [ ] Unsafe trait
+				- [ ] Accessing fields of a union
+				- [ ] When to use
+			- [ ] Advanced traits
+				- [ ] Specifying placeholder types in trait definitions with associated types
+				- [ ] Default generic type parameters and operator overloading
+				- [ ] Calling methods with the same name
+				- [ ] Using supertraits to require one trait's functionality within another trait
+				- [ ] Using the newtype pattern to implments external traits on external types
+			- [ ] Advanced types
+				- [ ] Newtype pattern for type safety and abstraction
+				- [ ] Create type synonyms with type aliases
+				- [ ] The never type that never returns
+				- [ ] Dynamically sized types and sthe `Sized` trait
+			- [ ] Advanced functions and closures
+				- [ ] Function pointers
+				- [ ] Returning closures
+			- [ ] Macros
+				- [ ] Difference with functions
+				- [ ] Declarative macros with `macro_rules!` for general metaprogramming
+				- [ ] Custom `derive` macro
+				- [ ] Attribute-like macros
+				- [ ] Function-like macros
+	- [ ] Implement data structures and algorithms:
+		- [ ] Array
+		    - [ ] Bubble sort
+		    - [ ] Insertion sort
+		    - [ ] Merge sort
+		    - [ ] Quicksort
+		    - [ ] Linear search
+		    - [ ] Binary search
+		    - [ ] Heap sort
+		- [ ] Stack
+		    - [ ] Insert
+		    - [ ] Pop
+		- [ ] Queue
+		    - [ ] Insert
+		    - [ ] Pop
+		- [ ] Tree
+		    - [ ] Breadth-first search
+		    - [ ] Depth-first search
+		    - [ ] Order traversal
+		    - [ ] Post-traversal
+		    - [ ] Pre-traversal
+		- [ ] Heap
+		    - [ ] Breadth-first search (adjacency)
+		    - [ ] Depth-first search (adjacency)
+		- [ ] Graph
+			 - [ ] Depth first search (adjacency list)
+		    - [ ] Breadth first search (adjacency matrix)
+		    - [ ] Dijkstra shortest path
+- **Primary resources**:
+	- [[the_rust_programming_language.pdf|The rust programing language]]
+	- https://rust-book.cs.brown.edu/
+	- [[rust_by_example.pdf|Rust by example]]
+- **Direct practice**: 
+	- Book projects.
+		- I/O project
+		- Multithreaded Web Server
+	- Think and apply two original use cases for a thing
+	- https://exercism.org/tracks/rust
+	- https://app.codecrafters.io/catalog
+	- Implement data structures
+- **Backup materials**:
+	- https://learning-rust.github.io/
+	- [[A Gentle Introduction to Rust.pdf]]
+	- [[The Cargo Book.pdf]]
+	- [[cheats|Cheats]]
+- **Drills**: 
+	- Rustlings
+	- https://www.codingame.com/training
+	- https://www.codewars.com/dashboard
+
+## Schedule
+- **How much**: 3 hours a day (aprox)
+- **When**: 05:30-07:30, 08:30-10:30
+- **Project time length**: 11/3/24-31/6/24 (2 1/2 months, 225 hours)
+## GO!
+
+## Review:
+
+## Mantain, relearn or master
+
+- [x] **Mantain**
+- [ ] **Relearn**
+- [ ] **Master**
+**How**: Working
